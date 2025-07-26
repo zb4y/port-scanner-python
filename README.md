@@ -1,3 +1,11 @@
+# Port Scanner (Python)
+
+This is a simple port scanner built with Python.  
+It scans ports from 1 to 1024 on a given target IP or domain.
+
+## 💻 Code
+
+```python
 import socket
 
 def scan_ports(target):
@@ -10,7 +18,7 @@ def scan_ports(target):
             print(f"[+] Port {port} is open")
             sock.close()
         except:
-            pass
+            print(f"[-] Port {port} is closed or unreachable")
 
 if __name__ == "__main__":
     target_ip = input("Enter target IP address or domain: ")
